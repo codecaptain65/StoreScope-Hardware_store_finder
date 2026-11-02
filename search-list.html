@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hardware Stores Directory | StoreScope</title>
+  <meta name="description" content="Browse hardware stores by county, town and material category. View ratings, stocked items and addresses.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="StoreScope, home">
+        <span class="logo-mark" aria-hidden="true">SS</span>
+        <span>StoreScope</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search-list.html" aria-current="page">Find Stores</a></li>
+          <li><a href="index.html#features">Why Use It</a></li>
+          <li><a href="admin-dash.html">Admin</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="signin.html">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-banner" aria-labelledby="directory-heading">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Find Stores</li>
+          </ol>
+        </nav>
+        <h1 id="directory-heading">Hardware stores</h1>
+        <p>Use the filters to narrow the list by county, town and the materials you need.</p>
+      </div>
+    </section>
+
+    <div class="container directory-layout">
+
+      <aside class="filter-panel" aria-labelledby="filter-heading">
+        <h2 id="filter-heading">Filter stores</h2>
+        <form class="filter-form" action="search-list.html" method="get">
+          <div class="field">
+            <label for="filter-county">County</label>
+            <select class="select" id="filter-county" name="county">
+              <option value="">All counties</option>
+              <option value="kiambu">Kiambu</option>
+              <option value="nairobi">Nairobi</option>
+              <option value="machakos">Machakos</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="filter-town">Town</label>
+            <select class="select" id="filter-town" name="town">
+              <option value="">All towns</option>
+              <optgroup label="Kiambu">
+                <option value="ruiru">Ruiru</option>
+                <option value="thika">Thika</option>
+              </optgroup>
+              <optgroup label="Nairobi">
+                <option value="westlands">Westlands</option>
+                <option value="embakasi">Embakasi</option>
+              </optgroup>
+              <optgroup label="Machakos">
+                <option value="machakos-town">Machakos Town</option>
+                <option value="mlolongo">Mlolongo</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Material categories</legend>
+            <div class="check-list" style="margin-top: 0.5rem;">
+              <label class="check-item"><input type="checkbox" name="category" value="cement"> Cement and masonry</label>
+              <label class="check-item"><input type="checkbox" name="category" value="timber"> Timber and boards</label>
+              <label class="check-item"><input type="checkbox" name="category" value="roofing"> Roofing</label>
+              <label class="check-item"><input type="checkbox" name="category" value="plumbing"> Plumbing</label>
+              <label class="check-item"><input type="checkbox" name="category" value="electrical"> Electrical</label>
+              <label class="check-item"><input type="checkbox" name="category" value="nails"> Nails and fasteners</label>
+            </div>
+          </fieldset>
+
+          <div class="filter-actions">
+            <button class="btn btn-primary" type="submit">Apply Filters</button>
+            <a class="btn btn-secondary" href="search-list.html">Reset</a>
+          </div>
+        </form>
+      </aside>
+
+      <section aria-labelledby="results-heading">
+        <div class="results-header">
+          <h2 id="results-heading">6 stores found</h2>
+          <p class="text-muted text-small">Sample listings shown for layout preview.</p>
+        </div>
+
+        <div class="store-grid">
+
+          <article class="card store-card">
+            <h3><a href="store-profile.html">Ruiru Builders Supplies</a></h3>
+            <div class="badge-row">
+              <span class="badge">Ruiru</span>
+              <span class="badge badge-county">Kiambu County</span>
+              <span class="badge badge-verified">Verified</span>
+            </div>
+            <p class="rating">
+              <span class="rating-stars" aria-hidden="true">★★★★☆</span>
+              <span class="sr-only">Rated 4.5 out of 5</span>
+              <span aria-hidden="true">4.5</span>
+              <span class="rating-count">(12 reviews)</span>
+            </p>
+            <ul class="tag-list" aria-label="Top stocked items">
+              <li class="tag">Bamburi Cement</li>
+              <li class="tag">Corrugated Sheets</li>
+              <li class="tag">Binding Wire</li>
+            </ul>
+            <p class="store-address">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Kenyatta Highway, near Ruiru Bypass junction, Ruiru</span>
+            </p>
+            <a class="btn btn-primary" href="store-profile.html">View Store &amp; Contact Info</a>
+          </article>
+
+          <article class="card store-card">
+            <h3><a href="store-profile.html">Thika Road Hardware</a></h3>
+            <div class="badge-row">
+              <span class="badge">Thika</span>
+              <span class="badge badge-county">Kiambu County</span>
+              <span class="badge badge-verified">Verified</span>
+            </div>
+            <p class="rating">
+              <span class="rating-stars" aria-hidden="true">★★★★☆</span>
+              <span class="sr-only">Rated 4.2 out of 5</span>
+              <span aria-hidden="true">4.2</span>
+              <span class="rating-count">(8 reviews)</span>
+            </p>
+            <ul class="tag-list" aria-label="Top stocked items">
+              <li class="tag">Roofing Nails</li>
+              <li class="tag">Timber Posts</li>
+              <li class="tag">Paint</li>
+            </ul>
+            <p class="store-address">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Commercial Street, opposite the main market, Thika</span>
+            </p>
+            <a class="btn btn-primary" href="store-profile.html">View Store &amp; Contact Info</a>
+          </article>
+
+          <article class="card store-card">
+            <h3><a href="store-profile.html">Westlands Building Centre</a></h3>
+            <div class="badge-row">
+              <span class="badge">Westlands</span>
+              <span class="badge badge-county">Nairobi County</span>
+              <span class="badge badge-pending">Pending verification</span>
+            </div>
+            <p class="rating">
+              <span class="rating-stars" aria-hidden="true">★★★★★</span>
+              <span class="sr-only">Rated 4.8 out of 5</span>
+              <span aria-hidden="true">4.8</span>
+              <span class="rating-count">(5 reviews)</span>
+            </p>
+            <ul class="tag-list" aria-label="Top stocked items">
+              <li class="tag">Electrical Cables</li>
+              <li class="tag">PVC Pipes</li>
+              <li class="tag">Tiles</li>
+            </ul>
+            <p class="store-address">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Mwanzi Road, behind the shopping centre, Westlands</span>
+            </p>
+            <a class="btn btn-primary" href="store-profile.html">View Store &amp; Contact Info</a>
+          </article>
+
+          <article class="card store-card">
+            <h3><a href="store-profile.html">Embakasi Plumbing &amp; Electrical</a></h3>
+            <div class="badge-row">
+              <span class="badge">Embakasi</span>
+              <span class="badge badge-county">Nairobi County</span>
+              <span class="badge badge-verified">Verified</span>
+            </div>
+            <p class="rating">
+              <span class="rating-stars" aria-hidden="true">★★★★☆</span>
+              <span class="sr-only">Rated 4.0 out of 5</span>
+              <span aria-hidden="true">4.0</span>
+              <span class="rating-count">(15 reviews)</span>
+            </p>
+            <ul class="tag-list" aria-label="Top stocked items">
+              <li class="tag">Water Tanks</li>
+              <li class="tag">Taps and Fittings</li>
+              <li class="tag">Switches</li>
+            </ul>
+            <p class="store-address">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Mombasa Road service lane, near the Embakasi stage, Embakasi</span>
+            </p>
+            <a class="btn btn-primary" href="store-profile.html">View Store &amp; Contact Info</a>
+          </article>
+
+          <article class="card store-card">
+            <h3><a href="store-profile.html">Machakos Town Hardware</a></h3>
+            <div class="badge-row">
+              <span class="badge">Machakos Town</span>
+              <span class="badge badge-county">Machakos County</span>
+              <span class="badge badge-verified">Verified</span>
+            </div>
+            <p class="rating">
+              <span class="rating-stars" aria-hidden="true">★★★☆☆</span>
+              <span class="sr-only">Rated 3.6 out of 5</span>
+              <span aria-hidden="true">3.6</span>
+              <span class="rating-count">(6 reviews)</span>
+            </p>
+            <ul class="tag-list" aria-label="Top stocked items">
+              <li class="tag">Cement</li>
+              <li class="tag">Building Blocks</li>
+              <li class="tag">Iron Bars</li>
+            </ul>
+            <p class="store-address">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Kenyatta Avenue, next to the bus park, Machakos Town</span>
+            </p>
+            <a class="btn btn-primary" href="store-profile.html">View Store &amp; Contact Info</a>
+          </article>
+
+          <article class="card store-card">
+            <h3><a href="store-profile.html">Mlolongo Timber &amp; Iron Sheets</a></h3>
+            <div class="badge-row">
+              <span class="badge">Mlolongo</span>
+              <span class="badge badge-county">Machakos County</span>
+              <span class="badge badge-pending">Pending verification</span>
+            </div>
+            <p class="rating">
+              <span class="rating-stars" aria-hidden="true">★★★★☆</span>
+              <span class="sr-only">Rated 4.4 out of 5</span>
+              <span aria-hidden="true">4.4</span>
+              <span class="rating-count">(9 reviews)</span>
+            </p>
+            <ul class="tag-list" aria-label="Top stocked items">
+              <li class="tag">Cypress Timber</li>
+              <li class="tag">Iron Sheets</li>
+              <li class="tag">Plywood</li>
+            </ul>
+            <p class="store-address">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span>Mombasa Road, opposite the Mlolongo weighbridge, Mlolongo</span>
+            </p>
+            <a class="btn btn-primary" href="store-profile.html">View Store &amp; Contact Info</a>
+          </article>
+
+        </div>
+
+        <nav class="pagination" aria-label="Results pages">
+          <a class="btn btn-secondary btn-sm" href="search-list.html" aria-disabled="true">Previous</a>
+          <span class="text-small text-muted">Page 1 of 1</span>
+          <a class="btn btn-secondary btn-sm" href="search-list.html" aria-disabled="true">Next</a>
+        </nav>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>StoreScope</strong><br>A discovery and information directory for hardware stores and construction material suppliers. Not an online shop.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search-list.html">Find Stores</a></li>
+          <li><a href="admin-dash.html">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

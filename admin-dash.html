@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | StoreScope</title>
+  <meta name="description" content="Administrator dashboard for managing counties, towns, store listings, product categories and review approvals.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="StoreScope, home">
+        <span class="logo-mark" aria-hidden="true">SS</span>
+        <span>StoreScope</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search-list.html">Find Stores</a></li>
+          <li><a href="index.html#features">Why Use It</a></li>
+          <li><a href="admin-dash.html" aria-current="page">Admin</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="signin.html">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container admin-layout">
+
+      <aside class="admin-sidebar">
+        <h2 id="admin-nav-heading">Administration</h2>
+        <nav class="admin-nav" aria-labelledby="admin-nav-heading">
+          <ul>
+            <li><a href="#overview" aria-current="page">Overview</a></li>
+            <li><a href="#geographical-data">Geographical Data</a></li>
+            <li><a href="#store-listings">Store Listings</a></li>
+            <li><a href="#product-categories">Product Categories</a></li>
+            <li><a href="#review-approvals">Review Approvals</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="admin-main">
+
+        <section id="overview" aria-labelledby="overview-heading">
+          <div class="admin-title">
+            <h1 id="overview-heading">Admin dashboard</h1>
+          </div>
+          <div class="stat-grid">
+            <div class="card stat-card">
+              <span class="stat-value">6</span>
+              <span class="stat-label">Listed stores</span>
+            </div>
+            <div class="card stat-card">
+              <span class="stat-value">2</span>
+              <span class="stat-label">Pending verification</span>
+            </div>
+            <div class="card stat-card">
+              <span class="stat-value">3</span>
+              <span class="stat-label">Counties</span>
+            </div>
+            <div class="card stat-card">
+              <span class="stat-value">2</span>
+              <span class="stat-label">Reviews to approve</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="geographical-data" aria-labelledby="geo-heading">
+          <div class="admin-title">
+            <h2 id="geo-heading">Geographical data</h2>
+            <button class="btn btn-secondary btn-sm" type="button">Add County or Town</button>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <caption class="sr-only">Counties, towns and store counts</caption>
+              <thead>
+                <tr>
+                  <th scope="col">County</th>
+                  <th scope="col">Towns listed</th>
+                  <th scope="col">Stores</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Kiambu</th><td>Ruiru, Thika</td><td>2</td></tr>
+                <tr><th scope="row">Nairobi</th><td>Westlands, Embakasi</td><td>2</td></tr>
+                <tr><th scope="row">Machakos</th><td>Machakos Town, Mlolongo</td><td>2</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="store-listings" aria-labelledby="stores-heading">
+          <div class="admin-title">
+            <h2 id="stores-heading">Store listings</h2>
+            <button class="btn btn-primary btn-sm" type="button">Add Store</button>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <caption class="sr-only">Listed hardware stores with status and actions</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Store</th>
+                  <th scope="col">County</th>
+                  <th scope="col">Town</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Rating</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Ruiru Builders Supplies</th>
+                  <td>Kiambu</td>
+                  <td>Ruiru</td>
+                  <td><span class="badge badge-verified">Verified</span></td>
+                  <td>4.5</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn btn-secondary btn-sm" type="button" aria-label="Edit Ruiru Builders Supplies">Edit</button>
+                      <button class="btn btn-success btn-sm" type="button" disabled aria-label="Verify Ruiru Builders Supplies (already verified)">Verify</button>
+                      <button class="btn btn-danger btn-sm" type="button" aria-label="Delete Ruiru Builders Supplies">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Thika Road Hardware</th>
+                  <td>Kiambu</td>
+                  <td>Thika</td>
+                  <td><span class="badge badge-verified">Verified</span></td>
+                  <td>4.2</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn btn-secondary btn-sm" type="button" aria-label="Edit Thika Road Hardware">Edit</button>
+                      <button class="btn btn-success btn-sm" type="button" disabled aria-label="Verify Thika Road Hardware (already verified)">Verify</button>
+                      <button class="btn btn-danger btn-sm" type="button" aria-label="Delete Thika Road Hardware">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Westlands Building Centre</th>
+                  <td>Nairobi</td>
+                  <td>Westlands</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td>4.8</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn btn-secondary btn-sm" type="button" aria-label="Edit Westlands Building Centre">Edit</button>
+                      <button class="btn btn-success btn-sm" type="button" aria-label="Verify Westlands Building Centre">Verify</button>
+                      <button class="btn btn-danger btn-sm" type="button" aria-label="Delete Westlands Building Centre">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Embakasi Plumbing &amp; Electrical</th>
+                  <td>Nairobi</td>
+                  <td>Embakasi</td>
+                  <td><span class="badge badge-verified">Verified</span></td>
+                  <td>4.0</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn btn-secondary btn-sm" type="button" aria-label="Edit Embakasi Plumbing and Electrical">Edit</button>
+                      <button class="btn btn-success btn-sm" type="button" disabled aria-label="Verify Embakasi Plumbing and Electrical (already verified)">Verify</button>
+                      <button class="btn btn-danger btn-sm" type="button" aria-label="Delete Embakasi Plumbing and Electrical">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Machakos Town Hardware</th>
+                  <td>Machakos</td>
+                  <td>Machakos Town</td>
+                  <td><span class="badge badge-verified">Verified</span></td>
+                  <td>3.6</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn btn-secondary btn-sm" type="button" aria-label="Edit Machakos Town Hardware">Edit</button>
+                      <button class="btn btn-success btn-sm" type="button" disabled aria-label="Verify Machakos Town Hardware (already verified)">Verify</button>
+                      <button class="btn btn-danger btn-sm" type="button" aria-label="Delete Machakos Town Hardware">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Mlolongo Timber &amp; Iron Sheets</th>
+                  <td>Machakos</td>
+                  <td>Mlolongo</td>
+                  <td><span class="badge badge-pending">Pending</span></td>
+                  <td>4.4</td>
+                  <td>
+                    <div class="row-actions">
+                      <button class="btn btn-secondary btn-sm" type="button" aria-label="Edit Mlolongo Timber and Iron Sheets">Edit</button>
+                      <button class="btn btn-success btn-sm" type="button" aria-label="Verify Mlolongo Timber and Iron Sheets">Verify</button>
+                      <button class="btn btn-danger btn-sm" type="button" aria-label="Delete Mlolongo Timber and Iron Sheets">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="product-categories" aria-labelledby="categories-heading">
+          <div class="admin-title">
+            <h2 id="categories-heading">Product categories</h2>
+            <button class="btn btn-secondary btn-sm" type="button">Add Category</button>
+          </div>
+          <ul class="chip-list" aria-label="Current product categories">
+            <li class="chip">Steel</li>
+            <li class="chip">Cement &amp; Masonry</li>
+            <li class="chip">Concrete</li>
+            <li class="chip">Wood &amp; Boards</li>
+            <li class="chip">Roofing</li>
+            <li class="chip">Bricks</li>
+            <li class="chip">Plumbing</li>
+            <li class="chip">Binding Wire</li>
+            <li class="chip">Electrical</li>
+            <li class="chip">Nails &amp; Fasteners</li>
+          </ul>
+        </section>
+
+        
+
+        <section id="review-approvals" aria-labelledby="reviews-admin-heading">
+          <div class="admin-title">
+            <h2 id="reviews-admin-heading">Review approvals</h2>
+          </div>
+          <div class="moderation-list">
+            <article class="card moderation-item">
+              <div>
+                <h3>Ruiru Builders Supplies</h3>
+                <p><span class="rating-stars" aria-hidden="true">★★★★★</span> <span class="sr-only">Rated 5 out of 5.</span> “Staff confirmed stock by phone before I travelled.” <span class="text-muted">Submitted by Peter M.</span></p>
+              </div>
+              <div class="row-actions">
+                <button class="btn btn-success btn-sm" type="button" aria-label="Approve review by Peter M.">Approve</button>
+                <button class="btn btn-danger btn-sm" type="button" aria-label="Reject review by Peter M.">Reject</button>
+              </div>
+            </article>
+            <article class="card moderation-item">
+              <div>
+                <h3>Thika Road Hardware</h3>
+                <p><span class="rating-stars" aria-hidden="true">★★★☆☆</span> <span class="sr-only">Rated 3 out of 5.</span> “Found the shop easily, but parking was limited.” <span class="text-muted">Submitted by Mary A.</span></p>
+              </div>
+              <div class="row-actions">
+                <button class="btn btn-success btn-sm" type="button" aria-label="Approve review by Mary A.">Approve</button>
+                <button class="btn btn-danger btn-sm" type="button" aria-label="Reject review by Mary A.">Reject</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>StoreScope</strong><br>A discovery and information directory for hardware stores and construction material suppliers. Not an online shop.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search-list.html">Find Stores</a></li>
+          <li><a href="admin-dash.html">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
